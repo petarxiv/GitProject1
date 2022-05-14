@@ -6,7 +6,8 @@ public class Main {
         // write your code here
         System.out.println("I am Groot!!!");
 
-
+        System.out.println("I am Groot!!!");
+        System.out.println("I am Groot!!!");
 
     }
 }
