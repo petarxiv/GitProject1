@@ -1,27 +1,27 @@
 Git - is a version control system, that helps us to track and backup our project
 Github - is a remote location where we can have our backed up codes safe for future references.
-We can work in
+We can work in collaboration on the same project!
 
-
-
-
+What is a local repo? --> a storage area on our system
 What is remote repo? --> a storage area on the internet
 
 Tracking our first project
 Create a new project in intellij and in order to start tracking it follow the steps:
-1. Find the location of your project (
-2. Decide the location where
+1. Find the location of your project (in intellij the path is written in front of project name; you can also right click
+    on project name and the click on open in explorer)
+2. Decide the location where you want to create your project (DO NOT create a repo within a repo!!!)
 3. Navigate your terminal to the location of your project
+
  Initialize the repo:
 1. git init
 
  Stage architecture:
-Working directory - all the files that you have in your project
-Staging area - an area between the repo and the working directory. Here the snapshot of all the files are moved
+-- Working directory - all the files that you have in your project
+-- Staging area - an area between the repo and the working directory. Here the snapshot of all the files are moved
 before actually moving them to repo - the advantage is that you can easily change the files there
-Repo - actual storage area
+-- Repo - actual storage area
 
-Steps of tracking
+ Steps of tracking
 git status --> untracked files that are in staging area nut not in repo yet.
 It doesn't tell us about files in staging area wich are also in repo
 
@@ -32,4 +32,13 @@ Github:
 2. Make sure you check the connection before. Use gir remote -v If empty, it is not connected
 3. git remote add origin Place the url of the remote repo
 4. git branch -M main (naming your branch)
--- You need to do all these steps Only once
+-- You need to do all these steps Only once after creation of a new repo!!
+    After that you don't need to go trough them unless you want to change your connection
+
+Common ERROR: ONLY first time you're pushing use git push -u origin main!!!!
+Next time you can use git push
+
+How to remove your connection/unlincked and reestablish it for another repo?
+If local repo is connected to another/not correct remote repo it will give you an error (The data on remote doesn't
+match or contain some commits that you don't have on local). This is because we need to synchronise, all the files have to be sync.
+If you make this mistake --> git remote remove origin
